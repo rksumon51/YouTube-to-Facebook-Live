@@ -5,9 +5,10 @@ YOUTUBE_URL = "https://youtu.be/vi6bpnKvVDg"
 FACEBOOK_STREAM = "FB-763366903520984-0-Ab5K-DGJcARNcmOO0kiz_VPv"
 
 def get_stream():
-    return subprocess.check_output(
-        ["yt-dlp", "-g", YOUTUBE_URL]
+    url = subprocess.check_output(
+        ["yt-dlp", "-f", "best", "-g", YOUTUBE_URL]
     ).decode().strip()
+    return url
 
 while True:
     try:
@@ -28,5 +29,5 @@ while True:
     except Exception as e:
         print("Stream error:", e)
 
-    print("Restarting stream in 10 seconds...")
+    print("Restarting in 10 seconds...")
     time.sleep(10)
