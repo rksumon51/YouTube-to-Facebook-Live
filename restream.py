@@ -1,8 +1,8 @@
 import subprocess
 import time
 
-YOUTUBE_URL = "https://www.youtube.com/watch?v=VIDEO_ID"
-FACEBOOK_STREAM = "rtmps://live-api-s.facebook.com:443/rtmp/YOUR_FACEBOOK_STREAM_KEY"
+YOUTUBE_URL = "https://youtu.be/vi6bpnKvVDg"
+FACEBOOK_STREAM = "FB-763366903520984-0-Ab5K-DGJcARNcmOO0kiz_VPv"
 
 def get_stream():
     return subprocess.check_output(
